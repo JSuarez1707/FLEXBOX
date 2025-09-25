@@ -6,13 +6,21 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #868585;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  /* background-color: #868585ea; */
+  background-image: url(producto.jpg);
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 
 
 .nav {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background-color: #d9d9d9;
@@ -28,31 +36,75 @@ body {
 
 
 
-.nav__menu {
+.nav ul {
     display: flex;
     gap: 20px;
 }
 
-.nav__item {
+.nav ul li {
     list-style: none;
 }
 
+.nav ul li a:hover {
+  color: #f51515;
+}
+
+/* .ul__#nav-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+} */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, ninmax(280px, 1fr));
+}
 .produc-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.produc-card:hover {
+  transform: scale(1.02);
+}
+
+.produc-card img {
+  width: 100%;
+  height: auto;
+}
+
+.produc-info {
+  padding: 15px;
+  flex-grow: 1;
+}
+
+.produc-info p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.produc-card button {
+  padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: backgraund-color 0.3s;
+  width: 100%;
+}
+
+.produc-card button:hover {
+  background-color: #0056b3;
 }
 
 
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.gallery__image {
-  width: calc(33.33% - 10px);
-}
 
 .contact-form__row {
   display: flex;
@@ -64,3 +116,26 @@ body {
   flex-direction: column;
   gap: 15px;
 }
+
+.contact-form__input {
+  flex: 1;
+}
+
+.contact-form__texterea {
+  resize: vertical;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+ .task-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+ }
+
+ 
